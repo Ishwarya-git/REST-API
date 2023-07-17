@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aqua;
+        }
+        h1 {
+            margin-top: 20px;
+        }
+        h2{
+            color: brown;
+            text-align: left;
+            margin-left: 20px;
+        }
+        form {
+            text-align: left;
+            margin-left: 20px;
+        }
+        label {
+            color: blue;
+            font-size: 17px;
+        }
+        button {
+            cursor: pointer;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">CRUD APPLICATION</h1>
+    <h2>Add user</h2>
+    <form action = "/addUser" method="POST">
+       <label for="id">User Id</label>  <input type="text" id="userid" name="userid" size="20" ><br>
+        <label for="name">Name</label> <input type="text" id="username" name="username" size="20" ><br>
+
+        <label for="dob">DOB</label> <input type="date" id="dob" name="dob" size="20" ><br>
+        <label for="profession">Profession</label> <input type="text" id="profession" name="profession" size="20" ><br><br>
+        <button type="submit" name="submit">Add User</button>
+    </form>
+    <h2>Get Specific User Details</h2>
+    <form action="/particularuser"  method ="post" >
+        <label for="userid">User Id</label>  <input type="text" id="userid" name="userid" size="20" required ><br><br>
+        <button type="submit " name="submit">
+            Get User Info
+        </button>
+    </form>
+    <h2>Delete User Details</h2>
+    <form action="/deleteuser"  method ="post" >
+        <label for="userid">User Id</label> <input type="text" id="userid" name="userid" size="20"><br><br>
+        <button type="submit " name="submit">
+            Delete User
+        </button>
+    </form>
+    <h2>Show All Details</h2>
+    <form action="/showAll"  method ="get" >
+        <button type="submit " name="submit"><br>
+            Show All
+        </button>
+    </form>
+</body>
+</html>
